@@ -1,0 +1,921 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CCD2417-E507-4E21-953B-3C8D2C13F449}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>clinic_project.Form1</StartupObject>
+    <RootNamespace>clinic_project</RootNamespace>
+    <AssemblyName>clinic_project</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>clinic_project.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>clinic_project.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="appoint.Designer.vb">
+      <DependentUpon>appoint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="appoint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bill.Designer.vb">
+      <DependentUpon>bill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="bill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="breed.Designer.vb">
+      <DependentUpon>breed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="breed.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="check.Designer.vb">
+      <DependentUpon>check.vb</DependentUpon>
+    </Compile>
+    <Compile Include="check.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="color.Designer.vb">
+      <DependentUpon>color.vb</DependentUpon>
+    </Compile>
+    <Compile Include="color.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirm.Designer.vb">
+      <DependentUpon>confirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="confirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport10.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport10.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport11.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport11.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport12.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport12.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport13.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport13.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport14.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport14.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport15.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport15.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport16.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport16.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport17.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport17.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport18.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport18.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport19.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport19.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport20.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport20.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport21.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport21.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport3.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport4.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport5.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport6.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport6.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport7.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport7.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport8.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport8.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport9.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport9.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="desexing.Designer.vb">
+      <DependentUpon>desexing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="desexing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emp.Designer.vb">
+      <DependentUpon>emp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="emp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="finishDetail.Designer.vb">
+      <DependentUpon>finishDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="finishDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.vb">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gender.Designer.vb">
+      <DependentUpon>gender.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gender.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="general_service.Designer.vb">
+      <DependentUpon>general_service.vb</DependentUpon>
+    </Compile>
+    <Compile Include="general_service.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home.Designer.vb">
+      <DependentUpon>home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mCategoty.Designer.vb">
+      <DependentUpon>mCategoty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mCategoty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="medicine.Designer.vb">
+      <DependentUpon>medicine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="medicine.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="messagebox.Designer.vb">
+      <DependentUpon>messagebox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="messagebox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ms.Designer.vb">
+      <DependentUpon>ms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mTime.Designer.vb">
+      <DependentUpon>mTime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mTime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mType.Designer.vb">
+      <DependentUpon>mType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="pet.Designer.vb">
+      <DependentUpon>pet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="petdetail.Designer.vb">
+      <DependentUpon>petdetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="petdetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report.Designer.vb">
+      <DependentUpon>report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportbill.Designer.vb">
+      <DependentUpon>reportbill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportbill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="service.Designer.vb">
+      <DependentUpon>service.vb</DependentUpon>
+    </Compile>
+    <Compile Include="service.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tReport.Designer.vb">
+      <DependentUpon>tReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="unit.Designer.vb">
+      <DependentUpon>unit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="unit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YESorNO.Designer.vb">
+      <DependentUpon>YESorNO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="YESorNO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="appoint.resx">
+      <DependentUpon>appoint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bill.resx">
+      <DependentUpon>bill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="breed.resx">
+      <DependentUpon>breed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="check.resx">
+      <DependentUpon>check.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="color.resx">
+      <DependentUpon>color.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirm.resx">
+      <DependentUpon>confirm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport10.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport10.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport11.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport11.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport12.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport12.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport13.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport13.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport14.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport14.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport15.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport15.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport16.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport16.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport17.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport17.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport18.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport18.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport19.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport19.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport20.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport20.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport21.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport21.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport4.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport5.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport6.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport6.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport7.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport7.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport8.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport8.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport9.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport9.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="desexing.resx">
+      <DependentUpon>desexing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emp.resx">
+      <DependentUpon>emp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="finishDetail.resx">
+      <DependentUpon>finishDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gender.resx">
+      <DependentUpon>gender.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="general_service.resx">
+      <DependentUpon>general_service.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mCategoty.resx">
+      <DependentUpon>mCategoty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="medicine.resx">
+      <DependentUpon>medicine.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="messagebox.resx">
+      <DependentUpon>messagebox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ms.resx">
+      <DependentUpon>ms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mTime.resx">
+      <DependentUpon>mTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mType.resx">
+      <DependentUpon>mType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pet.resx">
+      <DependentUpon>pet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="petdetail.resx">
+      <DependentUpon>petdetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report.resx">
+      <DependentUpon>report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportbill.resx">
+      <DependentUpon>reportbill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="service.resx">
+      <DependentUpon>service.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tReport.resx">
+      <DependentUpon>tReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="unit.resx">
+      <DependentUpon>unit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YESorNO.resx">
+      <DependentUpon>YESorNO.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veterinarian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volunteer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-report %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\capsule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paws %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veterinary %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neuter %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prescription %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vaccine %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vitamin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leader1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veterinarian %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dog %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pills %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-can.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favourite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vaccine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vitamin %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prescription.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neuter %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paws %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veterinary %284%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pet-house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotation1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veterinarian %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stethoscope %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stethoscope.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veterinary %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\award.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groomer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal-training.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pet-shop %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pet-shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walking-the-dog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veterinarian %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adoption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\participant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veterinary %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veterinarian %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-door %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CFIM8649.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule %283%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scale %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle-bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printing-test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image048.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image0481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image0482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24-hours.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %284%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
